@@ -72,5 +72,10 @@ router.post('/submit-survey', (req, res) => {
     });
 });
 
+// Handling non existing files
+router.use((req, res) => {
+    res.status(404).render('404.ejs', shopData);
+});
+
 // Exporting the router object so index.js can access it
 module.exports = router;
