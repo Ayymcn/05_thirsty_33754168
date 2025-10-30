@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title><%=shopName%></title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <nav>
+         <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/search">Search</a></li>
+          <li><a href="/register">Register</a></li>
+          <li><a href="/survey">Survey</a></li>
+         </ul> 
+        </nav>
+        
+        <h1>Here you can search on your preferred drink</h1>
+        <p>Search any drink by name:</p>
+        <form action="/search_result" method="GET">
+            
+            Drink Name: <input id="search_name" type="text" name="search_text" required />
+            
+            Category: <input id="search_category" type = "text" name = "category" required />
+            
+            <input type="submit" value="OK">
+        </form>
+    </body>
+</html>

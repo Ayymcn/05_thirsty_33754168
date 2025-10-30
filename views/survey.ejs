@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title><%=shopName %></title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <nav>
+         <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/search">Search</a></li>
+          <li><a href="/register">Register</a></li>
+          <li><a href="/survey">Survey</a></li>
+         </ul>
+        </nav>
+        
+            <h1><%= shopName %> - Customer Satisfaction Survey</h1>
+            <form action="/submit-survey" method="POST">
+                <div class="form-group">
+                    First Name:<br>
+                    <input id="first" type="text" name="first" pattern="[A-Za-z]*" required/> <br>
+                    Last Name:<br>
+                    <input id="last" type="text" name="last" pattern="[A-Za-z]*" required/> <br>
+                    Email:<br>
+                    <input id="email" type="email" name="email" required/> <br>
+                    How old are you ?<br>
+                    <input id="age" type="number" name="age" min="1" max="120" required/> <br>
+                    Which drink categories do you consume? <br>
+                    <% for(let i=0; i<productCategories.length; i++) { %>
+                        <input type="radio" id="chosen-drink" name="category" value="<%= productCategories[i] %>" required/> <%= productCategories[i] %> <br>
+                     <% } %>
+                    <br>
+                    Are you a student? <br>
+                    <input type="checkbox" name="student" value="yes" required/> Yes <br><br>
+                    </div>
+                    <input type="submit" value="Submit" />
+                    </form>
+    </body>
+</html>

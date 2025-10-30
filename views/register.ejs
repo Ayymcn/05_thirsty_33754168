@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title><%= shopName %> </title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <nav>
+         <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/search">Search</a></li>
+          <li><a href="/register">Register</a></li>
+          <li><a href="/survey">Survey</a></li>
+         </ul>
+        </nav>
+        
+        <h1>This is the register page for <%=shopName%></h1>
+        <form method="POST" action="/registered" >
+            First Name: <input id="first" type="text" title="Please enter letters only." pattern = "[A-Za-z]*" name="first" required/>
+            Last Name: <input id="last" type="text" title="Please enter letters only." pattern = "[A-Za-z]*" name="last" required/>
+            Email: <input id="email" type="email" name="email" required />
+            
+            <input type="submit" value="OK" />
+        </form>
+    </body>
+</html>

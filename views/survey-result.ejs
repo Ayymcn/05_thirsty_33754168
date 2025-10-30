@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Survey Results | <%= shopName %></title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <nav>
+           <ul>
+             <li><a href="/">Home</a></li>
+             <li><a href="/about">About</a></li>
+             <li><a href="/search">Search</a></li>
+             <li><a href="/register">Register</a></li>
+             <li><a href="/survey">Survey</a></li>
+           </ul>
+        </nav>
+        
+        <h1>Thank you for your feedback, <%= formData.first %>!</h1>
+        <p>We've recorded your responses as shown below.</p>
+        <ul>
+            <li><strong>First Name:</strong> <%= formData.first %></li>
+            <li><strong>Last Name:</strong> <%= formData.last %></li>
+            <li><strong>Email:</strong> <%= formData.email %></li>
+            <li><strong>Age:</strong> <%= formData.age %></li>
+            <li><strong>Preferred Category:</strong> <%= formData.category %></li>
+        </ul>
+    </body>
+</html>
